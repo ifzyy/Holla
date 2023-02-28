@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
     current_user.update(current_room: nil)
 
     @users = User.all_except(current_user)
-    render 'index'
+    render 'show'
   end
 
   def show
@@ -23,9 +23,8 @@ class RoomsController < ApplicationController
     @message = Message.new
 
     pagy_messages = @single_room.messages.includes(:user).order(created_at: :desc)
-    @pagy, messages = pagy(pagy_messages, items: 10)
+    @pagy, messages = pagy(pagy_messages, items: 20)
     @messages = messages.reverse
-
     @users = User.all_except(current_user)
 
     set_notifications_to_read

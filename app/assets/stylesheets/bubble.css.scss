@@ -1,0 +1,126 @@
+#messages {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111b21;
+  background: url("http://forums.crackberry.com/attachments/blackberry-10-wallpapers-f308/137432d1361639896t-z10-wallpaper-set-z10-music.jpg");
+}
+@media (max-width: 900px) {
+  .speech-wrapper {
+    padding: 30px 10px 10px 10px;
+    max-width: 60%;
+
+    .bubble {
+      word-wrap: break-word;
+      min-width: 60px;
+      padding: 10px;
+        display: block;
+        background: #000;
+        border-radius: 20px;
+        box-shadow: 2px 8px 5px #000;
+        position: relative;
+        margin: 0 0 25px;
+
+      &.alt {
+        margin: 0 0 0 60px;
+      }
+
+      .txt {
+        padding: 10px 8px 15px 8px;
+        font-size: 15px;
+
+        .name {
+          font-weight: 600;
+          font-size: 12px;
+          margin: 0 0 4px;
+          color: #3498db;
+          display: flex;
+
+          span {
+            font-weight: normal;
+            color: #b3b3b3;
+          }
+
+          &.alt {
+            color: #2ecc71;
+          }
+        }
+
+        p {
+          margin: 0;
+          font-size: 20px;
+          color: #fff;
+        }
+
+        .timestamp {
+          font-size: 11px;
+          position: absolute;
+          bottom: 0;
+          right: 10px;
+          text-transform: uppercase;
+          color: #ffffff99;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 901px) {
+  .speech-wrapper {
+    padding: 30px 10px 10px 10px;
+    max-width: 60%;
+    max-height: 80vh;
+
+    .bubble {
+      word-wrap: break-word;
+      min-width: 60px;
+      padding: 10px;
+      display: block;
+      background: #000;
+      border-radius: 20px;
+      box-shadow: 2px 8px 5px #000;
+      position: relative;
+      margin: 0 0 25px;
+
+      &.alt {
+        margin: 0 0 0 60px;
+      }
+
+      .txt {
+        padding: 10px 15px 15px 13px;
+        font-size: 17px;
+
+        .name {
+          font-weight: 600;
+          font-size: 12px;
+          margin: 0 0 4px;
+          color: #3498db;
+          display: flex;
+
+          span {
+            font-weight: normal;
+            color: #b3b3b3;
+          }
+
+          &.alt {
+            color: #2ecc71;
+          }
+        }
+
+        p {
+          margin: 0;
+          font-size: 20px;
+          color: #fff;
+        }
+
+        .timestamp {
+          font-size: 13px;
+          position: absolute;
+          bottom: 0;
+          right: 10px;
+          text-transform: uppercase;
+          color: #ffffff99;
+        }
+      }
+    }
+  }
+}

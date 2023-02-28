@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def home
     recent_messages
     @online_users = User.where.not(status: User.statuses[:offline]).count
+    if current_user
+      redirect_to users_path
+    end
   end
 
   private

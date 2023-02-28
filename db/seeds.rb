@@ -5,15 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-john1 = User.create(email: "john1@gmail.com",
-                    password: "password",
-                    password_confirmation: "password",
+john1 = User.create(email: "johnsonnifemi8@gmail.com",
+                    password: "johnson#2#3",
+                    password_confirmation: "johnson#2#3",
                     role: "admin")
-User.create(email: "john2@gmail.com",
-            password: "password",
-            password_confirmation: "password")
-User.create(email: "john3@gmail.com",
-            password: "password",
-            password_confirmation: "password")
-john1.joined_rooms << Room.create(name: "General", is_private: false)
-john1.joined_rooms << Room.create(name: "Education", is_private: false)
+

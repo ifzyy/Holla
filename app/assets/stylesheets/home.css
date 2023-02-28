@@ -1,0 +1,64 @@
+.jumbotron {
+    background: #131211b3 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    height: 100vh;
+}
+strong {
+    color: white;
+}
+
+.ontop {
+    background-image: url("https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp");
+    background-size: cover;
+    margin-bottom: 50px;
+    height: 100vh;
+}
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.alpha {
+    font-size: 60px;
+    color: white;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.small {
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+}
+
+.butt {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.smalll {
+    color: white;
+    font-size: 18px;
+    margin-top: 60px;
+}
+
+.b {
+    margin-bottom: 50px;
+}
+
+.btnn {
+    margin-top: 20px;
+}
+
+

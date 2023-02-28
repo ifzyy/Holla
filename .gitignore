@@ -1,0 +1,5 @@
+application.yml
+sendgrid.env
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

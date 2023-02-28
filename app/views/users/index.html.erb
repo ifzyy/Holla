@@ -1,0 +1,15 @@
+<%= render "layouts/nav" %>
+<%= turbo_frame_tag "appearance_channel" %>
+<div id="appearance_channel"></div>
+<%= audio_tag "discord.mp3", id: 'audio-tag' %>
+<%= turbo_frame_tag "message_error" do %>
+  <%= render 'shared/message_error' %>
+<% end %>
+<div id="chatroom_container">
+  <div id="side_panel">
+    <%= turbo_stream_from "users" %>
+    <div id="users" data-controller="user-list">
+      <%= render "users/users", users: @users %>
+    </div>
+  </div>
+</div>

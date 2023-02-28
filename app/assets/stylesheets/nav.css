@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root {
+    --green: #218c74;
+    --gray: #b2bec3;
+}
+
+.whatsapp {
+    width: 100%;
+    background: white;
+}
+
+.navtop {
+    height: 20vh;
+    position: relative;
+    padding: 10px 10px 0 10px;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    background: black;
+ ;
+}
+.title {
+    display: flex;
+    color: white;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.navtop .title {
+    font-weight: bold;
+}
+
+.navtop .search {
+    margin-top: 3px;
+    margin-right: 50px;
+}
+
+.navtop .menu {
+    position: absolute;
+    right: 0;
+    margin-top: 3px;
+    margin-left: 4px;
+    margin-right: 8px;
+}
+
+.navtop .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.navtop .tab {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15.5px;
+    text-transform: uppercase;
+}
+
+.navtop .tab .line {
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+.navtop .tab .camera {
+    width: 25px;
+    margin-left: -40px;
+}
+
+.contact {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 8px;
+    right: 8px;
+    padding: 13px;
+    border-radius: 50%;
+    background: var(--green);
+    transition: all 0.1s ease;
+}
+
+.contact:hover {
+    filter: brightness(1.3);
+}
+
+.contact img {
+    width: 30px;
+}
+
+.splash {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    pointer-events: none;
+}
+
+.splash .logo {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.splash .logo img {
+    width: 90px;
+}
+
+.splash .meta {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 0;
+}
+
+.splash .meta img {
+    width: 70px;
+}
+
+.hide {
+    display: none;
+}
+
+.chatlist {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.profile img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.chatlist .chat {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+.chat .name {
+    margin-top: 4px;
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.chat .clock {
+    position: absolute;
+    right: 12px;
+    color: gray;
+    font-size: 13px;
+}

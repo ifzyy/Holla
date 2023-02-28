@@ -1,0 +1,24 @@
+<div class="whatsapp">
+  <div class="navtop">
+    <div class="top">
+      <span class="title">  
+      <div class="icon-container">
+        <%= link_to image_tag(current_user.chat_avatar, class: 'chat_pfp'), current_user %>
+        <%= turbo_stream_from "user_status" %>
+        <div>
+          <%= render "users/status", user: current_user %>
+        </div>
+      </div>
+      <div class="ms-2 me-auto username">
+        <%= link_to current_user.username, current_user, class:"msg-role-#{current_user.role}" %>
+      </div>
+    </span>
+              <%= link_to "Edit Account", edit_user_registration_path, class:'btn btn-secondary' %>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class:'btn btn-danger' %>
+    </div>
+    <span class="tab">
+      <div> <%= link_to "chat", users_path %></div>
+      <div> <%= link_to "Groups", rooms_path %></div>
+    </span>
+  </div>
+</div>

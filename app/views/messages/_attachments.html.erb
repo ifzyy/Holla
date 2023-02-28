@@ -1,7 +1,7 @@
 <% if message.attachments.attached? %>
-  <div class="row">
+  <div >
     <% message.attachments.each_with_index do |attachment, index| %>
-      <div class="col-12">
+      <div >
         <% if attachment.content_type.eql?("image/gif") %>
           <div class="message-image-container">
             <%= image_tag(attachment, class: "message-image") %>

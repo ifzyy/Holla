@@ -1,2 +1,30 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<%= turbo_frame_tag "appearance_channel" %>
+<div id="appearance_channel"></div>
+<%= audio_tag "discord.mp3", id: 'audio-tag' %>
+<%= turbo_frame_tag "message_error" do %>
+  <%= render 'shared/message_error' %>
+<% end %>
+
+
+    <% if @single_room %>
+        <%= turbo_stream_from @single_room %>
+        <div id="messages" data-controller="scroll">
+          <%= turbo_frame_tag "page_handler" %>
+                             <div class="room-header">
+            <div>
+            <%= link_to "", "/users", class:"bi bi-arrow-90deg-left back"%> 
+               <%= image_tag(@user.chat_avatar, class:'chat_pfp') %>
+             <%= @user&.username || @single_room.name %>
+
+            </div>
+          <%= link_to "", call_user_path(user: @user), target: "_blank", class: "bi bi-camera-video-fill" %>
+        </div>
+          <%= render "messages/pager", pagy: @pagy %>
+          <div id="messages-container">
+\
+            <%= render @messages %>
+          </div>
+        </div>
+        <%= render 'layouts/new_message_form' %>
+    <% end %>
+

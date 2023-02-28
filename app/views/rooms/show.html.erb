@@ -1,0 +1,19 @@
+<%= render "layouts/nav" %>
+
+<%= turbo_frame_tag "appearance_channel" %>
+<div id="appearance_channel"></div>
+<%= audio_tag "discord.mp3", id: 'audio-tag' %>
+<%= turbo_frame_tag "message_error" do %>
+  <%= render 'shared/message_error' %>
+<% end %>
+<div id="chatroom_container">
+  <div id="side_panel">
+    <%= turbo_stream_from "rooms" %>
+    <%= render 'layouts/new_room_form' %>
+    <%= render 'rooms/search_form' %>
+    <h4 class="joined-rooms">Joined  rooms</h4>
+    <div id="rooms" data-controller="room-list">
+      <%= render "rooms/rooms", rooms: @joined_rooms, user: current_user %>
+    </div>
+  </div>
+  </div>

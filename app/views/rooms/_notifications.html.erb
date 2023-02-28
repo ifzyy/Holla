@@ -2,5 +2,6 @@
                                             recipient: current_user).unread %>
 
 <% if unread.count > 0 %>
-    <%= "+#{unread.count}" %>
+<span class="btn btn-primary"> <%= "#{unread.count} unread messages" %></span>
+   
 <% end %>

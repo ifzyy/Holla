@@ -13,7 +13,7 @@ module Turbochat
 
     config.action_view.sanitized_allowed_tags = Loofah::HTML5::SafeList::ALLOWED_ELEMENTS
     config.action_view.sanitized_allowed_attributes = Loofah::HTML5::SafeList::ALLOWED_ATTRIBUTES
-
+    config.active_storage.variant_processor = :mini_magick
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

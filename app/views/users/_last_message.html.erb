@@ -2,14 +2,14 @@
   <div class="row">
     <div class="col-12 d-flex align-items-center justify-content-between">
       <em class="last-message">
-        <%= "#{sender.email}: #{last_message.body}".truncate(40) %>
+        <%=  "#{sender.username}: #{last_message.body}".truncate(40) %>
       </em>
       <%= content_tag(:em, class:"last-message-time", 
                 data: {
                 time: last_message.created_at.to_i
                 }) do %>
         <em class="last-message">
-          <%= "#{time_ago_in_words(last_message.created_at)} ago"%>
+          <%= last_message.created_at.strftime("%H:%M")%>
         </em>
       <% end %>
     </div>

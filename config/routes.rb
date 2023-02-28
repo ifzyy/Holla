@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'private/room'
   get 'admin/dashboard'
   get 'call', to: 'call#user', as: 'call_user'
   post 'call', to: 'call#create'
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
   }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'user/:id', to: 'users#show', as: 'user'
+  get 'users', to: 'users#index', as: 'users'
   # Defines the root path route ("/")
   # root "articles#index"
 end
