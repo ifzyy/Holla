@@ -6,7 +6,7 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-  config.active_storage.service = :digitalocean
+  
   config.active_storage.variant_processor = :mini_magick
 
   # If a default host is specifically defined then it's used otherwise the app is
@@ -14,20 +14,31 @@ Rails.application.configure do
   # so the app will blow up at boot-time if both `DEFAULT_URL_HOST` and
   # `HEROKU_APP_NAME` aren't defined.
 
-  host = ENV['DEFAULT_URL_HOST'] || "#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
+
   protocol = config.force_ssl ? 'https' : 'http'
 
   config.action_controller.default_url_options = {
-    host: host,
+    host: "https://blue-feather-7359.fly.dev/",
     protocol: protocol
   }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'https://blue-feather-7359.fly.dev/',
+    user_name:            'johnsonnifemi8@gmail.com',
+    password:             'frsumkglkyncxqae',
+    authentication:       'plain',
+    enable_starttls_auto: true,
+    open_timeout:         5,
+    read_timeout:         5 }
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-
+  config.action_mailer.raise_delivery_errors = true
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -38,7 +49,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.public_file_server.enabled = true
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass

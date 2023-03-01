@@ -7,7 +7,7 @@
            
               <div class="card-body text-black">
                 <%= form_for(resource, as: resource_name, url:
-                registration_path(resource_name),style:"background-color:
+                registration_path(resource_name), html: {data: {turbo: false}},style:"background-color:
                 #000000") do |f| %> <%= render "devise/shared/error_messages",
                 resource: resource %>
                 <div class="d-flex align-items-center mb-3 pb-1">
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="pt-1 mb-4">
-                  <%= f.submit "Log in",class: "btn btn-primary btn-lg
+                  <%= f.submit "Sign up",class: "btn btn-primary btn-lg
                   btn-block" %>
                 </div>
                 <%= link_to "Forgot password?",
