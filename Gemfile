@@ -88,3 +88,4 @@ gem 'sass-rails'
 gem "figaro"
 gem 'sendgrid-ruby'
 
+gem "rake"
