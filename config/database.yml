@@ -87,4 +87,5 @@ production:
   <<: *default
   database: Holla_production
   username: Holla
+  url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV["HOLLA_DATABASE_PASSWORD"] %>
